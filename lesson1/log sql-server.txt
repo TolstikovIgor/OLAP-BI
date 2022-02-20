@@ -1,0 +1,288 @@
+(base) igor@igor-MS-7808:~$ wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+[sudo] пароль для igor: 
+OK
+(base) igor@igor-MS-7808:~$ sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
+Игн:1 cdrom://Ubuntu-Studio 18.04 LTS _Bionic Beaver_ - Release amd64 (20180426) bionic InRelease
+Сущ:2 cdrom://Ubuntu-Studio 18.04 LTS _Bionic Beaver_ - Release amd64 (20180426) bionic Release
+Сущ:3 http://repo.yandex.ru/yandex-browser/deb beta InRelease                                         
+Сущ:4 http://dl.google.com/linux/chrome/deb stable InRelease                                          
+Сущ:5 http://ru.archive.ubuntu.com/ubuntu bionic InRelease                                            
+Пол:7 http://ru.archive.ubuntu.com/ubuntu bionic-updates InRelease [88,7 kB]                          
+Сущ:8 https://download.docker.com/linux/ubuntu bionic InRelease                                       
+Пол:9 http://ru.archive.ubuntu.com/ubuntu bionic-backports InRelease [74,6 kB]                        
+Пол:10 http://ru.archive.ubuntu.com/ubuntu bionic-proposed InRelease [242 kB]                         
+Сущ:11 http://archive.ubuntu.com/ubuntu bionic InRelease                                              
+Сущ:12 http://ppa.launchpad.net/eugenesan/ppa/ubuntu bionic InRelease                                 
+Игн:13 http://ppa.launchpad.net/mystic-mirage/pycharm/ubuntu bionic InRelease                         
+Сущ:14 http://archive.canonical.com/ubuntu bionic InRelease                                           
+Пол:15 http://security.ubuntu.com/ubuntu bionic-security InRelease [88,7 kB]                          
+Пол:16 https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019 bionic InRelease [10,5 kB]       
+Игн:17 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 InRelease                            
+Пол:18 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 Release [3 462 B]                    
+Игн:19 http://ppa.launchpad.net/sunab/kdenlive-release/ubuntu bionic InRelease                        
+Пол:20 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 Release.gpg [801 B]                  
+Сущ:21 http://ppa.launchpad.net/ubuntu-desktop/ubuntu-make/ubuntu bionic InRelease                    
+Игн:22 https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.4 InRelease                           
+Пол:23 https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.4 Release [5 380 B]                   
+Ошб:24 http://ppa.launchpad.net/mystic-mirage/pycharm/ubuntu bionic Release                           
+  404  Not Found [IP: 91.189.95.85 80]
+Ошб:25 http://ppa.launchpad.net/sunab/kdenlive-release/ubuntu bionic Release                          
+  404  Not Found [IP: 91.189.95.85 80]
+Пол:26 https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.4 Release.gpg [801 B]                 
+Пол:27 http://ru.archive.ubuntu.com/ubuntu bionic-updates/main amd64 DEP-11 Metadata [294 kB]
+Пол:28 http://ru.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 DEP-11 Metadata [289 kB]    
+Пол:29 http://ru.archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 DEP-11 Metadata [2 468 B] 
+Пол:30 http://ru.archive.ubuntu.com/ubuntu bionic-backports/universe amd64 DEP-11 Metadata [9 292 B]  
+Пол:31 http://ru.archive.ubuntu.com/ubuntu bionic-proposed/main amd64 DEP-11 Metadata [9 096 B]       
+Пол:32 http://ru.archive.ubuntu.com/ubuntu bionic-proposed/universe amd64 DEP-11 Metadata [3 996 B]
+Игн:20 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 Release.gpg 
+Пол:33 https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019 bionic/main amd64 Packages [19,6 kB]
+Пол:34 https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019 bionic/main arm64 Packages [4 397 B]
+Пол:35 https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019 bionic/main armhf Packages [4 397 B]
+Пол:36 http://security.ubuntu.com/ubuntu bionic-security/main amd64 DEP-11 Metadata [48,5 kB] 
+Пол:37 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 DEP-11 Metadata [60,4 kB]
+Пол:38 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 DEP-11 Metadata [2 468 B]   
+Пол:39 https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.4/multiverse amd64 Packages [13,1 kB] 
+Пол:40 https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.4/multiverse arm64 Packages [9 180 B]
+Чтение списков пакетов… Готово             
+E: Репозиторий «http://ppa.launchpad.net/mystic-mirage/pycharm/ubuntu bionic Release» не содержит файла Release.
+N: Обновление из этого репозитория нельзя выполнить безопасным способом, поэтому по умолчанию он отключён.
+N: Информацию о создании репозитория и настройках пользователя смотрите в справочной странице apt-secure(8).
+E: Репозиторий «http://ppa.launchpad.net/sunab/kdenlive-release/ubuntu bionic Release» не содержит файла Release.
+N: Обновление из этого репозитория нельзя выполнить безопасным способом, поэтому по умолчанию он отключён.
+N: Информацию о создании репозитория и настройках пользователя смотрите в справочной странице apt-secure(8).
+W: Ошибка GPG: http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 Release: Следующие подписи не могут быть проверены, так как недоступен открытый ключ: NO_PUBKEY D68FA50FEA312927
+E: Репозиторий «http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 Release» не подписан.
+N: Обновление из этого репозитория нельзя выполнить безопасным способом, поэтому по умолчанию он отключён.
+N: Информацию о создании репозитория и настройках пользователя смотрите в справочной странице apt-secure(8).
+(base) igor@igor-MS-7808:~$ sudo apt-get update
+Игн:1 cdrom://Ubuntu-Studio 18.04 LTS _Bionic Beaver_ - Release amd64 (20180426) bionic InRelease
+Сущ:2 cdrom://Ubuntu-Studio 18.04 LTS _Bionic Beaver_ - Release amd64 (20180426) bionic Release
+Сущ:3 http://ru.archive.ubuntu.com/ubuntu bionic InRelease                                            
+Сущ:4 http://ru.archive.ubuntu.com/ubuntu bionic-updates InRelease                                    
+Сущ:5 http://repo.yandex.ru/yandex-browser/deb beta InRelease                                         
+Сущ:6 http://ru.archive.ubuntu.com/ubuntu bionic-backports InRelease                                  
+Сущ:7 http://ru.archive.ubuntu.com/ubuntu bionic-proposed InRelease                                   
+Сущ:8 http://dl.google.com/linux/chrome/deb stable InRelease                                          
+Игн:9 https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.4 InRelease                            
+Сущ:10 http://ppa.launchpad.net/eugenesan/ppa/ubuntu bionic InRelease                                 
+Сущ:12 https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.4 Release                             
+Сущ:13 https://download.docker.com/linux/ubuntu bionic InRelease                                      
+Игн:14 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 InRelease                            
+Сущ:15 http://archive.canonical.com/ubuntu bionic InRelease                                           
+Сущ:16 http://archive.ubuntu.com/ubuntu bionic InRelease                                              
+Игн:17 http://ppa.launchpad.net/mystic-mirage/pycharm/ubuntu bionic InRelease                         
+Пол:18 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 Release [3 462 B]                    
+Игн:19 http://ppa.launchpad.net/sunab/kdenlive-release/ubuntu bionic InRelease                        
+Сущ:20 http://security.ubuntu.com/ubuntu bionic-security InRelease                                    
+Сущ:21 https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019 bionic InRelease                 
+Сущ:22 http://ppa.launchpad.net/ubuntu-desktop/ubuntu-make/ubuntu bionic InRelease                    
+Ошб:23 http://ppa.launchpad.net/mystic-mirage/pycharm/ubuntu bionic Release                           
+  404  Not Found [IP: 91.189.95.85 80]
+Пол:24 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 Release.gpg [801 B]                  
+Ошб:25 http://ppa.launchpad.net/sunab/kdenlive-release/ubuntu bionic Release                          
+  404  Not Found [IP: 91.189.95.85 80]
+Игн:24 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 Release.gpg
+Чтение списков пакетов… Готово    
+E: Репозиторий «http://ppa.launchpad.net/mystic-mirage/pycharm/ubuntu bionic Release» не содержит файла Release.
+N: Обновление из этого репозитория нельзя выполнить безопасным способом, поэтому по умолчанию он отключён.
+N: Информацию о создании репозитория и настройках пользователя смотрите в справочной странице apt-secure(8).
+E: Репозиторий «http://ppa.launchpad.net/sunab/kdenlive-release/ubuntu bionic Release» не содержит файла Release.
+N: Обновление из этого репозитория нельзя выполнить безопасным способом, поэтому по умолчанию он отключён.
+N: Информацию о создании репозитория и настройках пользователя смотрите в справочной странице apt-secure(8).
+W: Ошибка GPG: http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 Release: Следующие подписи не могут быть проверены, так как недоступен открытый ключ: NO_PUBKEY D68FA50FEA312927
+E: Репозиторий «http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 Release» не подписан.
+N: Обновление из этого репозитория нельзя выполнить безопасным способом, поэтому по умолчанию он отключён.
+N: Информацию о создании репозитория и настройках пользователя смотрите в справочной странице apt-secure(8).
+(base) igor@igor-MS-7808:~$ sudo apt-get install -y mssql-server
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Следующие пакеты устанавливались автоматически и больше не требуются:
+  bridge-utils ubuntu-fan
+Для их удаления используйте «sudo apt autoremove».
+Будут установлены следующие дополнительные пакеты:
+  libc++1 libc++abi1 libsasl2-modules-gssapi-mit libsss-nss-idmap0
+Предлагаемые пакеты:
+  clang
+Следующие НОВЫЕ пакеты будут установлены:
+  libc++1 libc++abi1 libsasl2-modules-gssapi-mit libsss-nss-idmap0 mssql-server
+Обновлено 0 пакетов, установлено 5 новых пакетов, для удаления отмечено 0 пакетов, и 58 пакетов не обновлено.
+Установлено или удалено не до конца 8 пакетов.
+Необходимо скачать 247 MB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 1 138 MB.
+Пол:1 http://ru.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libsasl2-modules-gssapi-mit amd64 2.1.27~101-g0780600+dfsg-3ubuntu2.3 [35,6 kB]
+Пол:2 http://ru.archive.ubuntu.com/ubuntu bionic/universe amd64 libc++abi1 amd64 6.0-2 [56,7 kB]      
+Пол:3 http://ru.archive.ubuntu.com/ubuntu bionic/universe amd64 libc++1 amd64 6.0-2 [183 kB]          
+Пол:4 http://ru.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libsss-nss-idmap0 amd64 1.16.1-1ubuntu1.7 [20,1 kB]
+Пол:5 https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019 bionic/main amd64 mssql-server amd64 15.0.4138.2-1 [247 MB]
+Получено 247 MB за 32с (7 662 kB/s)                                                                   
+Предварительная настройка пакетов ...
+Выбор ранее не выбранного пакета libsasl2-modules-gssapi-mit:amd64.
+(Чтение базы данных … на данный момент установлено 321782 файла и каталога.)
+Подготовка к распаковке …/libsasl2-modules-gssapi-mit_2.1.27~101-g0780600+dfsg-3ubuntu2.3_amd64.deb …
+Распаковывается libsasl2-modules-gssapi-mit:amd64 (2.1.27~101-g0780600+dfsg-3ubuntu2.3) …
+Выбор ранее не выбранного пакета libc++abi1:amd64.
+Подготовка к распаковке …/libc++abi1_6.0-2_amd64.deb …
+Распаковывается libc++abi1:amd64 (6.0-2) …
+Выбор ранее не выбранного пакета libc++1:amd64.
+Подготовка к распаковке …/libc++1_6.0-2_amd64.deb …
+Распаковывается libc++1:amd64 (6.0-2) …
+Выбор ранее не выбранного пакета libsss-nss-idmap0.
+Подготовка к распаковке …/libsss-nss-idmap0_1.16.1-1ubuntu1.7_amd64.deb …
+Распаковывается libsss-nss-idmap0 (1.16.1-1ubuntu1.7) …
+Выбор ранее не выбранного пакета mssql-server.
+Подготовка к распаковке …/mssql-server_15.0.4138.2-1_amd64.deb …
+Распаковывается mssql-server (15.0.4138.2-1) …
+Настраивается пакет libc++abi1:amd64 (6.0-2) …
+Настраивается пакет libsss-nss-idmap0 (1.16.1-1ubuntu1.7) …
+Настраивается пакет libsasl2-modules-gssapi-mit:amd64 (2.1.27~101-g0780600+dfsg-3ubuntu2.3) …
+Настраивается пакет python3-lib2to3 (3.6.9-1~18.04) …
+/usr/bin/python3.7: can't open file '/usr/lib/python3.7/py_compile.py': [Errno 2] No such file or directory
+dpkg: ошибка при обработке пакета python3-lib2to3 (--configure):
+ installed python3-lib2to3 package post-installation script subprocess returned error exit status 2
+dpkg: зависимости пакетов не позволяют настроить пакет python3-distutils:
+ python3-distutils зависит от python3-lib2to3 (>= 3.6.4), однако:
+  Пакет python3-lib2to3 пока не настроен.
+
+dpkg: ошибка при обработке пакета python3-distutils (--configure):
+ проблемы зависимостей — оставляем не настроенным
+Настраивается пакет libc++1:amd64 (6.0-2) …
+Отчёт apport не записан, так как сообщение об ошибке указывает на повторную ошибку от предыдущего отказа.
+  dpkg: зависимости пакетов не позволяют настроить пакет libglib2.0-dev-bin:
+ libglib2.0-dev-bin зависит от python3-distutils, однако:
+  Пакет python3-distutils пока не настроен.
+
+dpkg: ошибка при обработке пакета libglib2.0-dev-bin (--configure):
+ проблемы зависимостей — оставляем не настроенным
+dpkg: зависимости пакетов не позволяют настроить пакет libglib2.0-dev:amd64:
+ libglib2.0-dev:amd64 зависит от libglib2.0-dev-bin (= 2.56.4-0ubuntu0.18.04.8), однако:
+  Пакет libglib2.0-dev-bin пока не настроен.
+
+dpkg: ошибка при обработке пакета libglib2.0-dev:amd64 (--configure):
+ проблемы зависимостей — оставляем не настроенным
+Отчёт apport не записан, так как сообщение об ошибке указывает на повторную ошибку от предыдущего отказа.
+  Отчёт apport не записан, так как достигнуто значение MaxReports
+                                                                 Настраивается пакет mssql-server (15.0.4138.2-1) …
+
++--------------------------------------------------------------+
+Выполните команду "sudo /opt/mssql/bin/mssql-conf setup",
+чтобы завершить установку Microsoft SQL Server
++--------------------------------------------------------------+
+
+dpkg: зависимости пакетов не позволяют настроить пакет libharfbuzz-dev:amd64:
+ libharfbuzz-dev:amd64 зависит от libglib2.0-dev (>= 2.19.1), однако:
+  Пакет libglib2.0-dev:amd64 пока не настроен.
+
+dpkg: ошибка при обработке пакета libharfbuzz-dev:amd64 (--configure):
+ проблемы зависимостей — оставляем не настроенным
+dpkg: зависимости пакетов не позволяют настроить пакет libicu-le-hb-dev:amd64:
+ libicu-le-hb-dev:amd64 зависит от libharfbuzz-dev, однако:
+  Пакет libharfbuzz-dev:amd64 пока не настроен.
+
+dpkg: ошибка при обработке пакета libicu-le-hb-dev:amd64 (--configure):
+ проблемы зависимостей — оставляем не настроенным
+dpkg: зависимости пакетов не позволяют настроить пакеОтчёт apport не записан, так как достигнуто значение MaxReports
+             Отчёт apport не записан, так как достигнуто значение MaxReports
+                                                                            Отчёт apport не записан, так как достигнуто значение MaxReports
+                                    Отчёт apport не записан, так как достигнуто значение MaxReports
+                                                                                                   т libicu-dev:
+ libicu-dev зависит от libicu-le-hb-dev, однако:
+  Пакет libicu-le-hb-dev:amd64 пока не настроен.
+
+dpkg: ошибка при обработке пакета libicu-dev (--configure):
+ проблемы зависимостей — оставляем не настроенным
+dpkg: зависимости пакетов не позволяют настроить пакет libxml2-dev:amd64:
+ libxml2-dev:amd64 зависит от libicu-dev, однако:
+  Пакет libicu-dev пока не настроен.
+
+dpkg: ошибка при обработке пакета libxml2-dev:amd64 (--configure):
+ проблемы зависимостей — оставляем не настроенным
+Обрабатываются триггеры для man-db (2.8.3-2ubuntu0.1) …
+Обрабатываются триггеры для libc-bin (2.27-3ubuntu1.4) …
+При обработке следующих пакетов произошли ошибки:
+ python3-lib2to3
+ python3-distutils
+ libglib2.0-dev-bin
+ libglib2.0-dev:amd64
+ libharfbuzz-dev:amd64
+ libicu-le-hb-dev:amd64
+ libicu-dev
+ libxml2-dev:amd64
+E: Sub-process /usr/bin/dpkg returned an error code (1)
+(base) igor@igor-MS-7808:~$ sudo /opt/mssql/bin/mssql-conf setup
+usermod: изменения не внесены
+Выберите выпуск SQL Server:
+  1) Evaluation (бесплатный, без прав на использование в рабочем окружении, 180-дневное ограничение)
+  2) Developer (бесплатный, без прав на использование в рабочем окружении)
+  3) Express (бесплатная)
+  4) Web (платный)
+  5) Standard (платный)
+  6) Enterprise (платный) - Использование ядер ЦП ограничено 20 физическими ядрами или 40 в режиме многопоточности.
+  7) Enterprise Core (платный) - Использование ядер ЦП до максимума, поддерживаемого операционной системой
+  8) У меня есть лицензия, купленная через канал розничных продаж, и ключ продукта для ввода.
+
+Сведения о выпусках:
+https://go.microsoft.com/fwlink/?LinkId=2109348&clcid=0x419
+
+Использование платных выпусков этого программного обеспечения требует отдельного лицензирования через
+программу корпоративного лицензирования Майкрософт.
+При выборе платного выпуска вы подтверждаете наличие подходящего
+числа имеющихся лицензий для установки и запуска этого программного обеспечения.
+
+Укажите свой выпуск(1-8): 2
+Условия лицензии для этого продукта можно найти в
+/usr/share/doc/mssql-server или скачать:
+https://go.microsoft.com/fwlink/?LinkId=2104294&clcid=0x419
+
+Заявление о конфиденциальности можно просмотреть здесь:
+https://go.microsoft.com/fwlink/?LinkId=853010&clcid=0x419
+
+Вы принимаете условия лицензии? [Yes/No]:Yes
+
+
+Выберите язык для SQL Server:
+(1) English
+(2) Deutsch
+(3) Español
+(4) Français
+(5) Italiano
+(6) 日本語
+(7) 한국어
+(8) Português
+(9) Русский
+(10) 中文 – 简体
+(11) 中文 （繁体）
+Введите параметр от 1 до 11: 9
+Введите пароль системного администратора SQL Server: 
+Указанный пароль не соответствует требованиям к политике паролей SQL Server, так как он недостаточно сложный. Пароль должен содержать по меньшей мере восемь символов и включать символы трех из следующих четырех категорий: прописные буквы, строчные буквы, цифры и другие символы.
+Введите пароль системного администратора SQL Server: 
+Подтвердите пароль системного администратора SQL Server: 
+Настраивается SQL Server...
+
+ForceFlush is enabled for this instance. 
+ForceFlush feature is enabled for log durability.
+Created symlink /etc/systemd/system/multi-user.target.wants/mssql-server.service → /lib/systemd/system/mssql-server.service.
+Установка завершена. SQL Server запускается.
+(base) igor@igor-MS-7808:~$ systemctl status mssql-server --no-pager
+● mssql-server.service - Microsoft SQL Server Database Engine
+   Loaded: loaded (/lib/systemd/system/mssql-server.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2021-06-18 20:54:59 MSK; 5min ago
+     Docs: https://docs.microsoft.com/en-us/sql/linux
+ Main PID: 13155 (sqlservr)
+    Tasks: 179
+   CGroup: /system.slice/mssql-server.service
+           ├─13155 /opt/mssql/bin/sqlservr
+           └─13191 /opt/mssql/bin/sqlservr
+
+июн 18 20:55:10 igor-MS-7808 sqlservr[13155]: [108B blob data]
+июн 18 20:55:10 igor-MS-7808 sqlservr[13155]: [75B blob data]
+июн 18 20:55:10 igor-MS-7808 sqlservr[13155]: [177B blob data]
+июн 18 20:55:10 igor-MS-7808 sqlservr[13155]: [96B blob data]
+июн 18 20:55:10 igor-MS-7808 sqlservr[13155]: [181B blob data]
+июн 18 20:55:10 igor-MS-7808 sqlservr[13155]: [100B blob data]
+июн 18 20:55:10 igor-MS-7808 sqlservr[13155]: [106B blob data]
+июн 18 20:55:10 igor-MS-7808 sqlservr[13155]: [71B blob data]
+июн 18 20:55:10 igor-MS-7808 sqlservr[13155]: [217B blob data]
+июн 18 20:55:10 igor-MS-7808 sqlservr[13155]: [124B blob data]
+(base) igor@igor-MS-7808:~$ 
