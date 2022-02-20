@@ -1,0 +1,76 @@
+Dz-1)
+Установите Microsoft SQL Server вместе с Microsoft Analysis Services ([ссылка](https://go.microsoft.com/fwlink/?linkid=866662)).
+Скачайте базу данных AdventureWorks (последняя была AdventureWorks2019) ([ссылка](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2019.bak)). 
+Сервер отчетов Microsoft Power BI ([ссылка](https://www.microsoft.com/ru-RU/download/details.aspx?id=56722)).
+Microsoft Power BI Desktop ([ссылка](https://www.microsoft.com/en-us/download/details.aspx?id=56723)).
+И на основе данных из этой базы сделайте в Microsoft Excel (лучше в Microsoft Power BI) сводную таблицу и график.
+
+Инструкции как устанавливать: 
+MS Excel
+https://www.youtube.com/watch?v=7GVFYt6_ZFM&ab_channel=kudvenkat
+SSAS
+https://www.mssqltips.com/sqlservertip/6637/how-to-install-ssas-2019/
+!!!! не Tabular mode, а Multidimensional mode
+
+Dz-2)
+На основе базы данных AdventureWorks постройте свою базу данных с таблицей фактов и таблицами измерений, по схеме "Звезда".
+Я брал таблицы: 
+Product, SalesOrderDetail, SalesOrderHeader
+Звезда состояла из:
+FctSales, DmnDate, DmnOrder, DmnProduct
+
+Таблица фактов:
+
+select ProductID, f.SalesOrderID, h.OrderDate, sum(f.OrderQty * f.UnitPrice) as Sum
+ from [ods].[dbo].[FctSales] f
+ inner join [ods].[dbo].DmnOrder h on h.SalesOrderID = f.SalesOrderID
+ group by ProductID, f.SalesOrderID, OrderDate) AS SOURCE 
+
+где:
+ProductID - внешний ключ для DmnProduct
+SalesOrderID - внешний ключ для DmnOrder
+OrderDate - внешний ключ для DmnDate
+
+как создавалась таблица:
+INSERT INTO ods.[dbo].[FctSales]
+           ([ProductID]
+           ,[SalesOrderID]
+           ,[OrderQty]
+           ,[UnitPrice]
+           ,[ModifiedDate])
+select d.ProductID, 
+		d.SalesOrderID, 
+		d.OrderQty, 
+		d.UnitPrice, 
+		d.ModifiedDate 
+from [stg].[dbo].[SalesOrderDetail] d
+
+
+DmnOrder:
+INSERT INTO [ods].[dbo].[DmnOrder]
+           ([SalesOrderID],
+            [SalesOrderNumber],
+            [AccountNumber],
+            [CreditCardID],
+            [OrderDate],
+            [ModifiedDate])
+ select SalesOrderID, 
+           SalesOrderNumber, 
+           AccountNumber, 
+           CreditCardID,
+           OrderDate,
+           ModifiedDate 
+ from [stg].[dbo].SalesOrderHeader
+
+
+Dz-3) 
+На основе построенной базы данных по схеме "Звезда" с предыдущего урока соберите OLAP куб в Microsoft Analysis Services.
+Пример: https://youtu.be/f5DgG51KMf8
+
+В Microsoft Power BI Desktop постройте сводную таблицу, источником для которой должен быть ваш куб.
+Задействуйте все возможные измерения при построении отчета и сделайте так, чтобы работать с ним было удобно.
+
+Dz-4)
+Для базы данных по схеме "Звезда" со второго урока, настройте ETL-процессы между базой данных Adventure Works и вашей базой данных, 
+с использованием промежуточных баз данных stg и ods.
+Пример: https://youtu.be/enahePzYT6E
